@@ -1,0 +1,30 @@
+.top-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.question {
+  margin-top: 30px;
+}
+
+.restart {
+  cursor: pointer;
+}
+.restart:hover {
+  color: #fff;
+}
+
+.progress-bar {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 4px;
+  border-radius: 3px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.progress-bar-fill {
+  display: block;
+  height: 22px;
+  background-color: rgba(221, 221, 221, 0.3);
+  border-radius: 3px;
+  transition: width 500ms ease-in-out;
+}

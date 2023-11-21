@@ -1,27 +1,78 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-// Change these to your own questions!
 const questions = [
   {
     id: 1,
-    questionText: "Who set the Olympic record for the 100m dash in 2012?",
-    options: ["Usain Bolt", "Justin Gatlin", "Tyson Gay", "Asafa Powell"],
-    correctAnswerIndex: 0
+    questionText: "What is the capital of Switzerland?",
+    options: ["Bern", "Geneva", "Basel"],
+    correctAnswerIndex: 0,
   },
   {
     id: 2,
     questionText:
-      "When was Michael Phelps last named male World Swimmer of the Year?",
-    options: ["2012", "2014", "2016", "2018"],
-    correctAnswerIndex: 2
-  }
+      "Which radioactive element, with atomic number 92, is usually fuel in a nuclear power plant?",
+    options: ["Radium", "Uranium", "Lithium"],
+    correctAnswerIndex: 1,
+  },
+  {
+    id: 3,
+    questionText: "What is the name of the king of Great Britain?",
+    options: ["Charles", "Richard", "Edward"],
+    correctAnswerIndex: 0,
+  },
+  {
+    id: 4,
+    questionText: "Which vitamin is produced in the body by sunlight?",
+    options: ["Vitamin A", "Vitamin C", "Vitamin D"],
+    correctAnswerIndex: 2,
+  },
+  {
+    id: 5,
+    questionText: "How many 20 gram pieces are there in 1 kilo?",
+    options: ["20", "50", "100"],
+    correctAnswerIndex: 1,
+  },
+  {
+    id: 6,
+    questionText:
+      "In which athletics discipline does Armand Duplantis compete?",
+    options: ["Long jump", "Pole vault", "Triple jump"],
+    correctAnswerIndex: 1,
+  },
+  {
+    id: 7,
+    questionText:
+      "What is the name of the canal where a container ship ran aground in 2021??",
+    options: ["The Bosphorus", "The Suez Canal", "The Kiel Canal"],
+    correctAnswerIndex: 1,
+  },
+  {
+    id: 8,
+    questionText:
+      "What is the name of the ocean current that affects the climate in northern Europe?",
+    options: ["The Gulf Stream", "The Baltic Stream", "El Niño"],
+    correctAnswerIndex: 0,
+  },
+  {
+    id: 9,
+    questionText:
+      "What is a person called who does not believe there is a god?",
+    options: ["Atheist", "Anarchist", "Alarmist"],
+    correctAnswerIndex: 0,
+  },
+  {
+    id: 10,
+    questionText: "What is the center of a heliocentric worldview?",
+    options: ["The Milky Way", "The planet Mars", "The sun"],
+    correctAnswerIndex: 2,
+  },
 ];
 
 const initialState = {
   questions,
   answers: [],
   currentQuestionIndex: 0,
-  quizOver: false
+  quizOver: false,
 };
 
 export const quiz = createSlice({
@@ -64,7 +115,7 @@ export const quiz = createSlice({
         answerIndex,
         question,
         answer: question.options[answerIndex],
-        isCorrect: question.correctAnswerIndex === answerIndex
+        isCorrect: question.correctAnswerIndex === answerIndex,
       });
     },
 
@@ -92,6 +143,6 @@ export const quiz = createSlice({
      */
     restart: () => {
       return initialState;
-    }
-  }
+    },
+  },
 });
